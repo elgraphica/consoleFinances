@@ -88,7 +88,17 @@ var finances = [
 ];
 
 
+//Header
+console.log("Financial Analysis\n----------------------------");
 
+//total number of months
+var count = 0;
+for (var i = 0; i < finances.length; i++) {
+    if (typeof finances[i][0] === 'string') {
+        count++;
+    }
+}
+console.log("The total number of Months is:", count);
 
 
 
