@@ -100,8 +100,18 @@ for (var i = 0; i < finances.length; i++) {
 }
 console.log("The total number of Months is:", count);
 
+//total of profit
+var sum = 0;
+for (var i = 0; i < finances.length; i++) {
+    sum += finances[i][1];
+}
+console.log("The total progit is: £", sum);
 
-
-
-
+//avarage of the changes over the entire period
+var changes = 0;
+for (var i = 1; i < finances.length; i++) {
+    changes += finances[i][1] - finances[i-1][1];
+}
+var avgChange = changes / (finances.length - 1);
+console.log("The average change in profit is: £", avgChange);
 
