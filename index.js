@@ -115,3 +115,28 @@ for (var i = 1; i < finances.length; i++) {
 var avgChange = changes / (finances.length - 1);
 console.log("The average change in profit is: £", avgChange);
 
+//greatest increase in profits
+var maxIncrease = 0;
+var maxIncreasePeriod = "";
+for (var i = 1; i < finances.length; i++) {
+    var increase = finances[i][1] - finances[i-1][1];
+    if (increase > maxIncrease) {
+        maxIncrease = increase;
+        maxIncreasePeriod = finances[i][0];
+    }
+}
+console.log("The greatest increase in profits is: £", maxIncrease);
+console.log("The period of greatest increase was:", maxIncreasePeriod);
+
+//the greatest decrease in profits
+var maxDecrease = 0;
+var maxDecreasePeriod = "";
+for (var i = 1; i < finances.length; i++) {
+    var decrease = finances[i-1][1] - finances[i][1];
+    if (decrease > maxDecrease) {
+        maxDecrease = decrease;
+        maxDecreasePeriod = finances[i][0];
+    }
+}
+console.log("The greatest decrease in profits is: £", maxDecrease);
+console.log("The period of greatest decrease was:", maxDecreasePeriod);
