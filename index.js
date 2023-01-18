@@ -105,7 +105,7 @@ var sum = 0;
 for (var i = 0; i < finances.length; i++) {
     sum += finances[i][1];
 }
-console.log("The total progit is: £", sum);
+console.log("The total profit is: £", sum);
 
 //avarage of the changes over the entire period
 var changes = 0;
@@ -140,3 +140,5 @@ for (var i = 1; i < finances.length; i++) {
 }
 console.log("The greatest decrease in profits is: £", maxDecrease);
 console.log("The period of greatest decrease was:", maxDecreasePeriod);
+
+//Done
